@@ -3,12 +3,18 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <!--add code about new servlet -->
     <servlet>
-        <servlet-name>FIND</servlet-name>
-        <servlet-class>com.example.LiuHao2019211001001221.HelloWorldServlet</servlet-class>
+        <servlet-name>liuao</servlet-name><!--give any name-->
+        <servlet-class>com.Liuhao.week4.demo.JDBCDemoServlet</servlet-class><!--package +name of servlet class-->
     </servlet>
-    <servlet-mapping>
-        <servlet-name>FIND</servlet-name>
-        <url-pattern>/hello</url-pattern>
-    </servlet-mapping>
+    <!--automatic code-->
+ <servlet-mapping>
+     <servlet-name>liuao</servlet-name>
+     <url-pattern>/jdbc</url-pattern>
+ </servlet-mapping>
+
+    <!--x=5, x=a, so we can say a=5
+    so /hello==com.dabing.week2.demo.HelloWorldServlet
+    -->
 </web-app>
