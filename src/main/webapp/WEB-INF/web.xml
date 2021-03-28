@@ -17,4 +17,40 @@
     <!--x=5, x=a, so we can say a=5
     so /hello==com.dabing.week2.demo.HelloWorldServlet
     -->
+    <context-param>
+        <param-name>driver</param-name>
+        <param-value>com.microsoft.sqlserver.jdbc.SQLServerDriver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>url</param-name>
+        <param-value>jdbc:sqlserver://localhost;databaseName=userdb;</param-value>
+    </context-param>
+    <context-param>
+        <param-name>username</param-name>
+        <param-value>sa</param-value>
+    </context-param>
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>261217</param-value>
+    </context-param>
+    -->
+    <!--use my sql-->
+    <context-param>
+        <param-name>driver</param-name>
+        <param-value>com.mysql.jdbc.Driver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>url</param-name>
+        <param-value>jdbc:mysql://localhost:3306/userdb;</param-value>
+    </context-param>
+    <context-param>
+        <param-name>username</param-name>
+        <param-value>root</param-value>
+    </context-param>
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>root</param-value>
+    </context-param>
+
+
 </web-app>
