@@ -1,63 +1,82 @@
 package com.Liuhao.week5.demo;
-
-import java.sql.PreparedStatement;
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import com.Liuhao.dao.UserDao;
+import com.Liuhao.model.User;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.applet.Applet;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.ResultSet;
+import java.io.PrintWriter;
+import java.sql.*;
 
-@WebServlet(name = "LoginServlet", value = "/login")
+@WebServlet(name = "LoginServlet",value = "/login")
 public class LoginServlet extends HttpServlet {
-    Connection con = null;
+    public Connection dbConn=null;
     @Override
     public void init() throws ServletException {
-
-//    public Connection dbConn;
-//    public void init() {
-//        try { Class.forName(getServletConfig().getServletContext().getInitParameter("driver"));
-//            dbConn = DriverManager.getConnection(getServletConfig().getServletContext().getInitParameter("url"), getServletConfig().getServletContext().getInitParameter("Username"), getServletConfig().getServletContext().getInitParameter("Password"));
+        super.init();
+//        try {
+//            Class.forName(getServletConfig().getServletContext().getInitParameter("driver"));
+//            dbConn= DriverManager.getConnection(getServletConfig().getServletContext().getInitParameter("url"),getServletConfig().getServletContext().getInitParameter("Username"),getServletConfig().getServletContext().getInitParameter("Password"));
+//            System.out.println(dbConn);
 //        } catch (Exception e) {
-//            System.out.println(e); }
-        con =(Connection)getServletContext().getAttribute("dbConn");
-//        System.out.println(con);
+//            e.printStackTrace();
+//        }
+        dbConn=(Connection)getServletContext().getAttribute("con");
     }
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doPost(request, response);
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.getRequestDispatcher("WEB-INF/views/login.jsp").forward(req,resp);
     }
-    @Override
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String name = request.getParameter("name");
-        String password= request.getParameter("password");
-        System.out.println(name + password);
-//        System.out.println(con);
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String username=req.getParameter("username");
+        String password=req.getParameter("password");
+        UserDao userDao=new UserDao();
         try {
-            if( con != null){
-                String sql = "SELECT * FROM usertable WHERE name=? AND password=?;";
-                PreparedStatement ps = con.prepareStatement(sql);
-                ps.setString(1,name);
-                ps.setString(2,password);
-                ResultSet rs = ps.executeQuery();
-                if(rs.next()){
-                    request.setAttribute("ID",rs.getInt("id"));
-                    request.setAttribute("Username",rs.getString("name"));
-                    request.setAttribute("Password",rs.getString("password"));
-                    request.setAttribute("Email",rs.getString("email"));
-                    request.setAttribute("Gender",rs.getString("gender"));
-                    request.setAttribute("Birthdate",rs.getDate("birthdate"));
-                    request.getRequestDispatcher("userinfo.jsp").forward(request, response);
-                }else{
-                    request.setAttribute("msg" ,"username or password Error");
-                    request.getRequestDispatcher("login.jsp").forward(request,response);
-                    //  writer.print("Username or Password Error!!!");
-                }
+            User user=userDao.findByUsernamePassword(dbConn,username,password);
+            if(user!=null) {
+                req.setAttribute("user",user);
+                req.getRequestDispatcher("WEB-INF/views/userInfo.jsp").forward(req,resp);
             }
-        }catch (Exception e) {
+            else {
+                req.setAttribute("message","username or Password Error!!!");
+                req.getRequestDispatcher("WEB-INF/views/login.jsp").forward(req,resp);
+            }
+        } catch (SQLException e) {
             System.out.println(e);
         }
+//        Statement createDbStatement = null;
+//        PrintWriter writer=resp.getWriter();
+//        boolean find=false;
+//        try {
+//            createDbStatement = dbConn.createStatement();
+//            String dbRequire="select * from usertable where username='"+username+"' and password='"+password+"'";
+//            System.out.println(dbRequire);
+//            ResultSet resultDb=createDbStatement.executeQuery(dbRequire);
+//            if(resultDb.next()) {
+//                find=true;
+////                writer.println("Login success\nwelcome,"+username);
+//                req.setAttribute("id",resultDb.getInt("id"));
+//                req.setAttribute("username",resultDb.getString("username"));
+//                req.setAttribute("password",resultDb.getString("password"));
+//                req.setAttribute("email",resultDb.getString("mail"));
+//                req.setAttribute("gender",resultDb.getString("sex"));
+//                req.setAttribute("birthDate",resultDb.getDate("birth"));
+//                req.getRequestDispatcher("userInfo.jsp").forward(req,resp);
+//            }
+//        } catch (SQLException e) {
+//            System.out.println(e);
+//        }
+//        if(!find) {
+//            //            writer.println("Wrong username or password");
+//            req.setAttribute("massage","username or Password Error!!!");
+//            req.getRequestDispatcher("login.jsp").forward(req,resp);
+//        }
+
     }
 }
