@@ -1,15 +1,15 @@
 package com.Liuhao.model;
-import java.util.Date;
+
+import javax.xml.crypto.Data;
+import java.sql.Date;
+
 public class User {
     private int id;
     private String username;
     private String password;
     private String email;
     private String gender;
-    private Date birth;
-
-    public User() {
-    }
+    private Date birthDate;
 
     public int getId() {
         return id;
@@ -47,27 +47,6 @@ public class User {
         return gender;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public Date getBirth() {
-        return birth;
-    }
-
-    public void setBirth(Date birth) {
-        this.birth = birth;
-    }
-
-    public User(int id, String username, String password, String email, String gender, Date birth) {
-        this.id=id;
-        this.username=username;
-        this.password=password;
-        this.email=email;
-        this.gender=gender;
-        this.birth=birth;
-    }
-
     @Override
     public String toString() {
         return "User{" +
@@ -76,7 +55,33 @@ public class User {
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 ", gender='" + gender + '\'' +
-                ", birth=" + birth +
+                ", birthDate=" + birthDate +
                 '}';
     }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public Date getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public User() {
+    }
+
+    public User(int id, String username, String password, String email, String gender, Date birthDate) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.gender = gender;
+        this.birthDate = birthDate;
+    }
+
+
 }

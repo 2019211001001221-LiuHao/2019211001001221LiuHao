@@ -9,32 +9,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="deaf798f-94ca-4545-b57d-bf0195857a54" name="Default Changelist" comment="HW-Week5 and Week6 demo">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Liuhao/week4/demo/ConfigDemoServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Liuhao/week5/demo/LoginServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Liuhao/week6/JDBCServletContextListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Liuhao/week6/RedirectServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/footer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/logo.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/name.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/userList.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/userlnfo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+    <list default="true" id="deaf798f-94ca-4545-b57d-bf0195857a54" name="Default Changelist" comment="HW-week7.demo">
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Liuhao/controller/LogoutServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Liuhao/controller/UpdateUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019211001001221LiuHao.iml" beforeDir="false" afterPath="$PROJECT_DIR$/2019211001001221LiuHao.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LiuHao2019211001001221.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LiuHao2019211001001221.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dabing/week2/demo/HelloWorldServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dabing/week3/demo/2019211001001221LIuHao-LifeCycleServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dabing/week3/demo/h.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Liuhao/dao/IUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Liuhao/dao/IUserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Liuhao/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Liuhao/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Liuhao/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Liuhao/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Liuhao/week5/demo/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Liuhao/week5/demo/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Myjsp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Myjsp.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/name.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/userList.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/userlnfo.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/Liuhao/week4/demo/JDBCDemoServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/Liuhao/week4/demo/JDBCDemoServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dabing/week2/demo/HelloWorldServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dabing/week3/demo/RegisterServlet.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +41,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Tag Library Descriptor" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -81,7 +78,7 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="1pkBhjlM6I0WHdzDTAegtbP31Mr" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -95,6 +92,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -104,21 +102,15 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="http.proxy" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ASUS\IdeaProjects\2019211001001221LiuHao\src\main\webapp" />
+    </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Tomcat 8.5.63" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.63" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
         <artifact name="2019211001001221LiuHao:war exploded">
@@ -176,7 +168,14 @@
       <workItem from="1618060178399" duration="4000" />
       <workItem from="1618158055615" duration="727000" />
       <workItem from="1618158811968" duration="1798000" />
-      <workItem from="1618160628769" duration="425000" />
+      <workItem from="1618160628769" duration="1918000" />
+      <workItem from="1618162695060" duration="31000" />
+      <workItem from="1618202621522" duration="1274000" />
+      <workItem from="1618752524186" duration="1756000" />
+      <workItem from="1618754373735" duration="990000" />
+      <workItem from="1619238157640" duration="1742000" />
+      <workItem from="1619239948914" duration="1800000" />
+      <workItem from="1619241793347" duration="259000" />
     </task>
     <task id="LOCAL-00001" summary="HW-Week 2 Commit">
       <created>1615733551987</created>
@@ -269,7 +268,35 @@
       <option name="project" value="LOCAL" />
       <updated>1616926697986</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="HW-Week5 and Week6 demo">
+      <created>1618161224551</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1618161224551</updated>
+    </task>
+    <task id="LOCAL-00015" summary="HW-Week5 and Week6 demo">
+      <created>1618161494312</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1618161494312</updated>
+    </task>
+    <task id="LOCAL-00016" summary="HW-Week5 and Week6 demo">
+      <created>1618203295951</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1618203295951</updated>
+    </task>
+    <task id="LOCAL-00017" summary="HW-week7.demo">
+      <created>1618754567270</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1618754567270</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,7 +318,8 @@
     <MESSAGE value="HW-Week 2 Commit" />
     <MESSAGE value="HW-Week4Commit" />
     <MESSAGE value="HW-Week5 and Week6 demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="HW-Week5 and Week6 demo" />
+    <MESSAGE value="HW-week7.demo" />
+    <option name="LAST_COMMIT_MESSAGE" value="HW-week7.demo" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
