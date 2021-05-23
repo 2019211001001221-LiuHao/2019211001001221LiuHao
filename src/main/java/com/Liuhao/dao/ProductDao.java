@@ -1,11 +1,6 @@
 package com.Liuhao.dao;
-
 import com.Liuhao.model.Product;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +9,16 @@ public class ProductDao implements  IProductDao{
     public int save(Product product, Connection con) throws SQLException {
         int n = 0;
         String sql = "insert into Product(ProductName,ProductDescription,picture,price,CategoryId) values(?,?,?,?,?)";
+        prepareStatement(product, con, sql);
+        PreparedStatement pt = null;
+        n = pt.executeUpdate();
+        if (n > 0) {
+            return n;
+        }
+        return 0;
+    }//end save
+
+    private void prepareStatement(Product product, Connection con, String sql) throws SQLException {
         PreparedStatement pt = con.prepareStatement(sql);
         pt.setString(1, product.getProductName());
         pt.setString(2, product.getProductDescription());
@@ -25,12 +30,7 @@ public class ProductDao implements  IProductDao{
         }
         pt.setDouble(4, product.getPrice());
         pt.setInt(5, product.getCategoryId());
-        n = pt.executeUpdate();
-        if (n > 0) {
-            return n;
-        }
-        return 0;
-    }//end save
+    }
 
     @Override
     public int delete(Integer productId, Connection con) throws SQLException {
@@ -43,17 +43,8 @@ public class ProductDao implements  IProductDao{
     @Override
     public int update(Product instance, Connection con) throws SQLException{
         String sql="update Product set ProductName=?,ProductDescription=?,picture=?,price=?,CategoryId=? where ProductId=?";
-        PreparedStatement pstmt= con.prepareStatement(sql);
-        pstmt.setString(1,instance.getProductName());
-        pstmt.setString(2,instance.getProductDescription());
-        if(instance.getPicture()!=null) {
-            //for sql server
-            pstmt.setBinaryStream(3, instance.getPicture());
-            //for mysql
-            //   pt.setBlob(3, product.getPicture());
-        }
-        pstmt.setDouble(4, instance.getPrice());
-        pstmt.setInt(5, instance.getCategoryId());
+        prepareStatement(instance, con, sql);
+        PreparedStatement pstmt = null;
         pstmt.setInt(6,instance.getProductId());
         return pstmt.executeUpdate();
     }
@@ -67,35 +58,30 @@ public class ProductDao implements  IProductDao{
         Product product=null;
         if(rs.next()){
             product=new Product();
-            product.setProductId(rs.getInt("ProductId"));
-            product.setProductName(rs.getString("ProductName"));
-            product.setProductDescription(rs.getString("ProductDescription"));
-            product.setPicture(rs.getBinaryStream("picture"));
-            product.setPrice(rs.getDouble("price"));
-            product.setCategoryId(rs.getInt("CategoryId"));
+            ProductId(rs, product);
         }
         return product;
+    }
+
+    private void ProductId(ResultSet rs, Product product) throws SQLException {
+        product.setProductId(rs.getInt("ProductId"));
+        product.setProductName(rs.getString("ProductName"));
+        product.setProductDescription(rs.getString("ProductDescription"));
+        product.setPicture(rs.getBinaryStream("picture"));
+        product.setPrice(rs.getDouble("price"));
+        product.setCategoryId(rs.getInt("CategoryId"));
     }
 
     @Override
     public List<Product> findByCategoryId(int categoryId, Connection con)  throws SQLException{
         String sql="select * from Product where CategoryId=?";
+        return getProducts(categoryId, con, sql);
+    }
+
+    private List<Product> getProducts(int categoryId, Connection con, String sql) throws SQLException {
         PreparedStatement pstmt= con.prepareStatement(sql);
         pstmt.setInt(1,categoryId);
-        ResultSet rs= pstmt.executeQuery();
-        Product product=null;
-        List<Product> pro=new ArrayList<Product>();
-        if(rs.next()){
-            product=new Product();
-            product.setProductId(rs.getInt("ProductId"));
-            product.setProductName(rs.getString("ProductName"));
-            product.setProductDescription(rs.getString("ProductDescription"));
-            product.setPicture(rs.getBinaryStream("picture"));
-            product.setPrice(rs.getDouble("price"));
-            product.setCategoryId(rs.getInt("CategoryId"));
-            pro.add(product);
-        }
-        return pro;
+        return getProducts(pstmt);
     }
 
     @Override
@@ -104,17 +90,15 @@ public class ProductDao implements  IProductDao{
         PreparedStatement pstmt= con.prepareStatement(sql);
         pstmt.setDouble(1,minPrice);
         pstmt.setDouble(2,maxPrice);
+        return getProducts(pstmt);
+    }
+
+    private List<Product> getProducts(PreparedStatement pstmt) throws SQLException {
         ResultSet rs= pstmt.executeQuery();
-        Product product=null;
         List<Product> pro=new ArrayList<Product>();
-        if(rs.next()){
-            product=new Product();
-            product.setProductId(rs.getInt("ProductId"));
-            product.setProductName(rs.getString("ProductName"));
-            product.setProductDescription(rs.getString("ProductDescription"));
-            product.setPicture(rs.getBinaryStream("picture"));
-            product.setPrice(rs.getDouble("price"));
-            product.setCategoryId(rs.getInt("CategoryId"));
+        while(rs.next()){
+            Product product=new Product();
+            ProductId(rs, product);
             pro.add(product);
         }
         return pro;
@@ -124,20 +108,7 @@ public class ProductDao implements  IProductDao{
     public List<Product> findAll(Connection con) throws SQLException {
         String sql="select * from Product";
         PreparedStatement pstmt= con.prepareStatement(sql);
-        ResultSet rs= pstmt.executeQuery();
-        Product product=null;
-        List<Product> pro=new ArrayList<Product>();
-        if(rs.next()){
-            product=new Product();
-            product.setProductId(rs.getInt("ProductId"));
-            product.setProductName(rs.getString("ProductName"));
-            product.setProductDescription(rs.getString("ProductDescription"));
-            product.setPicture(rs.getBinaryStream("picture"));
-            product.setPrice(rs.getDouble("price"));
-            product.setCategoryId(rs.getInt("CategoryId"));
-            pro.add(product);
-        }
-        return pro;
+        return getProducts(pstmt);
     }
 
     @Override
@@ -145,40 +116,24 @@ public class ProductDao implements  IProductDao{
         String sql="select * from Product where ProductName=?";
         PreparedStatement pstmt= con.prepareStatement(sql);
         pstmt.setString(1,productName);
-        ResultSet rs= pstmt.executeQuery();
-        Product product=null;
-        List<Product> pro=new ArrayList<Product>();
-        if(rs.next()){
-            product=new Product();
-            product.setProductId(rs.getInt("ProductId"));
-            product.setProductName(rs.getString("ProductName"));
-            product.setProductDescription(rs.getString("ProductDescription"));
-            product.setPicture(rs.getBinaryStream("picture"));
-            product.setPrice(rs.getDouble("price"));
-            product.setCategoryId(rs.getInt("CategoryId"));
-            pro.add(product);
-        }
-        return pro;
+        return getProducts(pstmt);
     }
 
     @Override
     public List<Product> getPicture(Integer productId, Connection con) throws SQLException {
         String sql="select * from Product where ProductId=?";
-        PreparedStatement pstmt= con.prepareStatement(sql);
+        return getProducts(productId, con, sql);
+    }
+    public byte[] getPictureById(Integer productId,Connection con) throws SQLException{
+        byte[] imgByte=null;
+        String sql="select picture from Product where ProductId=?";
+        PreparedStatement pstmt=con.prepareStatement(sql);
         pstmt.setInt(1,productId);
-        ResultSet rs= pstmt.executeQuery();
-        Product product=null;
-        List<Product> pro=new ArrayList<Product>();
-        if(rs.next()){
-            product=new Product();
-            product.setProductId(rs.getInt("ProductId"));
-            product.setProductName(rs.getString("ProductName"));
-            product.setProductDescription(rs.getString("ProductDescription"));
-            product.setPicture(rs.getBinaryStream("picture"));
-            product.setPrice(rs.getDouble("price"));
-            product.setCategoryId(rs.getInt("CategoryId"));
-            pro.add(product);
+        ResultSet rs=pstmt.executeQuery();
+        while(rs.next()){
+            Blob blob=rs.getBlob("picture");
+            imgByte=blob.getBytes(1,(int)blob.length());
         }
-        return pro;
+        return imgByte;
     }
 }

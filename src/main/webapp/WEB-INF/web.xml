@@ -16,13 +16,23 @@
         <servlet-name>ConfigDemoServlet</servlet-name>
         <url-pattern>/config</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>updateUser</servlet-name>
+        <jsp-file>/WEB-INF/views/updateUser.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>updateUser</servlet-name>
+        <url-pattern>/updateUser.jsp</url-pattern>
+    </servlet-mapping>
+
     <context-param>
         <param-name>name</param-name>
-        <param-value>JieMengyao</param-value>
+        <param-value>Liuhao</param-value>
     </context-param>
     <context-param>
         <param-name>student-id</param-name>
-        <param-value>2019211001001201</param-value>
+        <param-value>2019211001001221</param-value>
     </context-param>
     <context-param>
         <param-name>driver</param-name>
@@ -30,53 +40,70 @@
     </context-param>
     <context-param>
         <param-name>url</param-name>
-        <param-value>jdbc:sqlserver://localhost:1433;DatabaseName=userjmy</param-value>
+        <param-value>jdbc:sqlserver://localhost:1433;DatabaseName=userdb</param-value>
     </context-param>
     <context-param>
-        <param-name>Username</param-name>
+        <param-name>username</param-name>
         <param-value>sa</param-value>
     </context-param>
     <context-param>
-        <param-name>Password</param-name>
+        <param-name>password</param-name>
         <param-value>123456</param-value>
     </context-param>
 
-    <servlet>
-        <servlet-name>anyName</servlet-name>
-        <servlet-class>com.Liuhao.HelloWorldServlet</servlet-class>
-    </servlet>
+
     <servlet>
         <servlet-name>LifeCycleServlet</servlet-name>
         <servlet-class>com.Liuhao.week3.LifeCycleServlet</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>RegisterServlet</servlet-name>
-        <servlet-class>com.Liuhao.week3.RegisterServlet</servlet-class>
-    </servlet>
-    <!--    <servlet>-->
-    <!--        <servlet-name>SearchServlet</servlet-name>-->
-    <!--        <servlet-class>com.JieMengyao.week6.demo.SearchServlet</servlet-class>-->
-    <!--    </servlet>-->
-    <!--    <servlet-mapping>-->
-    <!--        <servlet-name>SearchServlet</servlet-name>-->
-    <!--        <url-pattern>/search</url-pattern>-->
-    <!--    </servlet-mapping>-->
-
-    <servlet-mapping>
-        <servlet-name>anyName</servlet-name>
-        <url-pattern>/hello</url-pattern>
-    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>LifeCycleServlet</servlet-name>
         <url-pattern>/life</url-pattern>
     </servlet-mapping>
+
+
     <servlet-mapping>
-        <servlet-name>RegisterServlet</servlet-name>
-        <url-pattern>/register</url-pattern>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/Login</url-pattern>
     </servlet-mapping>
     <welcome-file-list>
         <welcome-file>home</welcome-file>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
+
+    <welcome-file-list>
+        <welcome-file>home</welcome-file>
+    </welcome-file-list>
+
+    <filter>
+        <filter-name>AuthFilter</filter-name>
+        <filter-class>com.Liuhao.filter.AdminAuthenticationFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthFilter</filter-name>
+        <url-pattern>/hello</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>HelloFilter</filter-name>
+        <filter-class>com.Liuhao.filter.HelloFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>HelloFilter</filter-name>
+        <url-pattern>/hello</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>HelloServlet</filter-name>
+        <filter-class>com.Liuhao.filter.HelloFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>LoggerFilter</filter-name>
+        <filter-class>com.Liuhao.filter.LoggerFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoggerFilter</filter-name>
+        <url-pattern>/hello</url-pattern>
+    </filter-mapping>
 
 </web-app>
