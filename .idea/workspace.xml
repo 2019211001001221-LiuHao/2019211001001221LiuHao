@@ -9,16 +9,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d584ed3e-a238-46e8-8c19-276e2101e7bf" name="默认变更列表" comment="HW-Week 13Commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lab1/Dog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lab1/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/lab1/assignment1.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/lab1/assignment2/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/lab1/assignment2/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/lab1/assignment2/validate.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/lab1/assignment2/welcome.jsp" afterDir="false" />
+    <list default="true" id="d584ed3e-a238-46e8-8c19-276e2101e7bf" name="默认变更列表" comment="lib 1">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Liuhao/controller/AccountDetailsServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Liuhao/controller/OrderDetailsServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Liuhao/controller/OrderServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Liuhao/dao/IOrderDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Liuhao/dao/OrderDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Liuhao/model/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Liuhao/model/Payment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/accountDetails.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/orderList.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/order.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orderSuccess.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/updateUserView.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/orderDetails.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Liuhao/controller/UpdateUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Liuhao/controller/UpdateUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Liuhao/week6/EncondingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Liuhao/week6/EncondingFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +39,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -43,6 +54,10 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/webapp/orderDetails.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/accountDetails.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JspContextManager">
     <jsp-to-context jsp-file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/footer.jsp" context-file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" />
@@ -70,7 +85,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -85,10 +100,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ASUS\IdeaProjects\2019211001001221LiuHao\src\main\webapp\WEB-INF" />
+      <recent name="C:\Users\ASUS\IdeaProjects\2019211001001221LiuHao\src\main\java\com\Liuhao" />
+      <recent name="C:\Users\ASUS\IdeaProjects\2019211001001221LiuHao\src\main\java\com\Liuhao\dao" />
       <recent name="C:\Users\ASUS\IdeaProjects\2019211001001221LiuHao\src\main\webapp" />
       <recent name="C:\Users\ASUS\IdeaProjects\2019211001001221LiuHao\src\main\java\com" />
-      <recent name="C:\Users\zengjiayi\IdeaProjects\2019211001001202-zengjiayi\src\main\webapp\WEB-INF\views" />
-      <recent name="C:\Users\zengjiayi\IdeaProjects\2019211001001202-zengjiayi\src\main\webapp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ASUS\IdeaProjects\2019211001001221LiuHao\lib" />
@@ -223,7 +239,7 @@
       <workItem from="1621787091319" duration="1884000" />
       <workItem from="1622396514296" duration="1405000" />
       <workItem from="1622771092178" duration="771000" />
-      <workItem from="1622982272720" duration="663000" />
+      <workItem from="1622982272720" duration="3091000" />
     </task>
     <task id="LOCAL-00001" summary="HW-Week8 Commit">
       <created>1619449571657</created>
@@ -260,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622397912083</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="lib 1">
+      <created>1622983230956</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1622983230956</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,7 +307,8 @@
     <MESSAGE value="HW-Week 11 Commit" />
     <MESSAGE value="12HW-Week12 Commit" />
     <MESSAGE value="HW-Week 13Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="HW-Week 13Commit" />
+    <MESSAGE value="lib 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="lib 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

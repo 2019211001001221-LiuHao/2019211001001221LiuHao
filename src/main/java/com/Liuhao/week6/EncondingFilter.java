@@ -1,24 +1,33 @@
-//package com.Lisha.week6;
+package com.Liuhao.week6;
 
-//import javax.servlet.*;
-//import javax.servlet.annotation.*;
-//import java.io.IOException;
-//
-//@WebFilter(filterName = "Filter",value = "/*")    //value表示要过滤的路径
-//public class EncodingFilter implements javax.servlet.Filter {
-//    public void destroy() {
-//    }
-//
-//    public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
-////        System.out.println("-------------------");
-//        req.setCharacterEncoding("UTF-8");
-//        resp.setContentType("text/html;charset=utf-8"); //同时设置服务端的编码格式和客户端的响应文件类型及响应编码格式
-//        chain.doFilter(req, resp);
-//    }
-//
-//
-//    public void init(FilterConfig config) throws ServletException {
-//
-//    }
-//
-//}
+
+
+import java.io.IOException;
+
+import javax.servlet.*;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.*;
+import javax.servlet.annotation.WebFilter;
+import java.io.IOException;
+
+@WebFilter(filterName = "Filter",value = "/*")
+class EncondingFilter implements javax.servlet.Filter {
+    public void destroy() {
+    }
+
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException, IOException {
+//        System.out.println("-------------------");
+        request.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html;charset=utf-8");
+        chain.doFilter(request, response);
+    }
+
+    public void init(FilterConfig config) throws ServletException {
+
+    }
+
+} 
