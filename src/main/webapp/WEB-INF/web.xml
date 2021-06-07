@@ -49,7 +49,14 @@
         <param-value>123456</param-value>
     </context-param>
 
-
+    <filter>
+        <filter-name>JMYFilter</filter-name>
+        <filter-class>com.lab2.LHFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>JMYFilter</filter-name>
+        <url-pattern>/lab2/welcome.jsp</url-pattern>
+    </filter-mapping>
     <servlet>
         <servlet-name>LifeCycleServlet</servlet-name>
         <servlet-class>com.Liuhao.week3.LifeCycleServlet</servlet-class>
