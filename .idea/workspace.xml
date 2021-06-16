@@ -9,19 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d584ed3e-a238-46e8-8c19-276e2101e7bf" name="默认变更列表" comment="HW-Week14">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lab2/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lab2/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lab2/validate.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lab2/welcome.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/lab2/LHFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/lab2/LoginFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/lab2/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/lab2/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/lab2/validate.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/lab2/welcome.jsp" afterDir="false" />
+    <list default="true" id="d584ed3e-a238-46e8-8c19-276e2101e7bf" name="默认变更列表" comment="lab2">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contactUs.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Liuhao/model/item.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Liuhao/controller/AdminHomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Liuhao/controller/AdminHomeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/orderList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/orderList.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -104,13 +96,15 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -233,7 +227,8 @@
       <workItem from="1622771092178" duration="771000" />
       <workItem from="1622982272720" duration="3270000" />
       <workItem from="1623051392592" duration="345000" />
-      <workItem from="1623052171452" duration="2273000" />
+      <workItem from="1623052171452" duration="2636000" />
+      <workItem from="1623864282632" duration="691000" />
     </task>
     <task id="LOCAL-00001" summary="HW-Week8 Commit">
       <created>1619449571657</created>
@@ -284,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622985431292</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="lab2">
+      <created>1623055369721</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1623055369721</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,7 +312,8 @@
     <MESSAGE value="HW-Week 13Commit" />
     <MESSAGE value="lib 1" />
     <MESSAGE value="HW-Week14" />
-    <option name="LAST_COMMIT_MESSAGE" value="HW-Week14" />
+    <MESSAGE value="lab2" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

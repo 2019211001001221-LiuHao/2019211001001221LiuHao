@@ -1,36 +1,36 @@
 package com.Liuhao.controller;
 
-
-import com.Liuhao.model.User;
+import com.Liuhao.dao.OrderDao;
+import com.Liuhao.model.Order;
+import com.Liuhao.model.Payment;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.sql.Connection;
+import java.util.List;
 
-
-@WebServlet(name = "AdminHomeServlet", value = "/admin/home")
-public class AdminHomeServlet extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession(false);
-        if (session != null && session.getAttribute("user") != null) {
-            User user = (User) session.getAttribute("user");
-            if ("admin".equals(user.getUsername())) {
-                request.getRequestDispatcher("../WEB-INF/views/admin/index.jsp").forward(request, response);
-            } else {
-                session.invalidate();
-                request.setAttribute("message", "Unauthorized Access admin module!!!");
-                request.getRequestDispatcher("../WEB-INF/views/login.jsp").forward(request, response);
-            }
-        } else {
-            request.setAttribute("message", "Please Login as admin!!!");
-            request.getRequestDispatcher("../WEB-INF/views/login.jsp").forward(request, response);
-        }
+@WebServlet(name = "AdminOrderListServlet", value = "/admin/orderList")
+class AdminOrderListServlet extends HttpServlet {
+    private Connection con = null;
+    public void init(){
+        con = (Connection)getServletContext().getAttribute("dbConn");
+    }
+    public void destroy(){
+        super.destroy();
+    }
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        doGet(request,response);
     }
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        List<Payment> paymentTypeList= Payment.findAllPayment(con);
+        request.setAttribute("paymentTypeList",paymentTypeList);
+        OrderDao orderDao = new OrderDao();
+        List<Order> orderList = orderDao.findAll(con);
+        request.setAttribute("orderList",orderList);
+        String path="/WEB-INF/views/admin/orderList.jsp";
+        request.getRequestDispatcher(path).forward(request,response);
     }
 }
