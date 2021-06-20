@@ -9,11 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d584ed3e-a238-46e8-8c19-276e2101e7bf" name="默认变更列表" comment="lab2">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contactUs.jsp" afterDir="false" />
+    <list default="true" id="d584ed3e-a238-46e8-8c19-276e2101e7bf" name="默认变更列表" comment="HW-week15">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lab3/CalServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lab3/HitCountServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/lab3/cal.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Liuhao/controller/AdminHomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Liuhao/controller/AdminHomeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/orderList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/orderList.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +69,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/lab3" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -84,11 +84,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\ASUS\IdeaProjects\2019211001001221LiuHao\src\main\webapp" />
+      <recent name="C:\Users\ASUS\IdeaProjects\2019211001001221LiuHao\src\main\webapp\lab3" />
       <recent name="C:\Users\ASUS\IdeaProjects\2019211001001221LiuHao\src\main\java\com" />
+      <recent name="C:\Users\ASUS\IdeaProjects\2019211001001221LiuHao\src\main\webapp" />
       <recent name="C:\Users\ASUS\IdeaProjects\2019211001001221LiuHao\src\main\webapp\WEB-INF" />
       <recent name="C:\Users\ASUS\IdeaProjects\2019211001001221LiuHao\src\main\java\com\Liuhao" />
-      <recent name="C:\Users\ASUS\IdeaProjects\2019211001001221LiuHao\src\main\java\com\Liuhao\dao" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ASUS\IdeaProjects\2019211001001221LiuHao\lib" />
@@ -96,19 +96,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Tomcat 8.5.64" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.63" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -228,7 +215,8 @@
       <workItem from="1622982272720" duration="3270000" />
       <workItem from="1623051392592" duration="345000" />
       <workItem from="1623052171452" duration="2636000" />
-      <workItem from="1623864282632" duration="691000" />
+      <workItem from="1623864282632" duration="929000" />
+      <workItem from="1623940488126" duration="2042000" />
     </task>
     <task id="LOCAL-00001" summary="HW-Week8 Commit">
       <created>1619449571657</created>
@@ -286,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623055369721</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="HW-week15">
+      <created>1623865023395</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1623865023395</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +308,8 @@
     <MESSAGE value="lib 1" />
     <MESSAGE value="HW-Week14" />
     <MESSAGE value="lab2" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab2" />
+    <MESSAGE value="HW-week15" />
+    <option name="LAST_COMMIT_MESSAGE" value="HW-week15" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
